@@ -1,0 +1,552 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+h3{
+    text-align: center;
+    color:black;
+    padding-top: 50px;
+    font-size: 35px;
+    padding-bottom:10px;
+}
+.line{
+    background-color: rgb(131, 67, 22);
+    display:block;
+    height: 3px;
+    width:90px;
+    margin:auto;
+    margin-bottom: 3%;
+    transition: 0.4s;
+}
+
+.Title-Line:hover .line{
+    transform: scaleX(1.5);
+}
+
+
+/* ---------------------------------------------------Navigation Bar--------------------------------------------------------- */
+.bar{
+    width: 100%;
+    height: 15vh;
+    top:0;
+    overflow: auto;
+    background-color: #fff;
+
+}
+.bar img{
+    margin-top: 2%;
+    float: left;
+    margin-left: 10%;
+}
+.bar ul{
+    margin-left: 6%;
+    list-style-type: none;
+    float: left;
+    
+}
+.bar li{
+    display: inline-block;
+    margin: 7% 20px 0px 20px;
+
+    
+    
+}
+.bar .nbutton{
+    text-decoration: none;
+    color:rgb(131, 67, 22);
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+}
+.bar .nbutton::after{
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    height: 0%;
+    width: 100%;
+    border-left: 0.8px solid rgb(131, 67, 22);
+    border-right: 0.8px solid rgb(131, 67, 22); 
+    transition: 0.4s;
+    transform: scale(1.4);
+    visibility: hidden; 
+}
+.bar .nbutton::before{
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 0%;
+    border-top: 0.8px solid rgb(131, 67, 22);
+    border-bottom: 0.8px solid rgb(131, 67, 22); 
+    transition: 0.7s;
+    transform: scale(1.4);
+    visibility: hidden; 
+}
+.bar .nbutton:hover::after{
+    visibility: visible;
+    height: 100%;
+}
+.bar .nbutton:hover::before{
+    visibility: visible;
+    width: 100%;
+}
+/* ---------------------------------------------------Drop Down--------------------------------------------------------- */
+.ListMenu{
+    margin-top:15px;
+    border: solid 1px rgb(131, 67, 22); 
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    transform: scale(0);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.dropdown:hover .ListMenu{
+    visibility: visible;
+    transition: 0.6s;
+    transform: scale(1);
+}
+.ListMenu table{
+    border:solid 1px black;
+    
+    width:400px;
+    height:100px;
+}
+.ListMenu th{
+    height: 35px;
+}
+.ListMenu tr{
+    height: 25px;
+}
+.ListMenu th a{
+    padding-bottom: 3px;
+    border-bottom: dotted 1px rgb(131, 67, 22);
+}
+.ListMenu a{
+    color: rgb(131, 67, 22);
+    line-height: 10px;
+    text-decoration: none;
+}
+/* ---------------------------------------------------Navigation Bar End--------------------------------------------------------- */
+.barEnd{
+    width:300px;
+    float: right;
+    margin: 2.5% 5% 0px 0% ;
+}
+.barEnd span{
+    font-size: 25px;
+    margin-left: 20px;
+}
+.barEnd .zero{
+    font-size: 9px;
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(131, 67, 22);   
+}
+.zero span{
+    font-size: 12px;
+    padding-top:10px;
+    vertical-align: middle;
+    margin-left:2.3px;
+}
+.barEnd .cart{
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 4px;
+}
+/* ---------------------------------------------------Hero Image--------------------------------------------------------- */
+.home{
+    height: 75vh;
+    overflow:auto;
+}
+
+.home .hero-image{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-image: url(../images/main-banner-1-1600x700.jpg);
+    background-size: cover;
+}
+
+/* ---------------------------------------------------Special Category--------------------------------------------------------- */
+
+.special{
+    height: 120vh;
+    overflow: auto;
+}
+.special-container{
+    margin-top:5%;
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.special-item{
+    width:280px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+}
+
+.special-item span  {
+    display: block;
+    padding-top:15px;
+    font-size: 15px;
+    color:gray;
+}
+.special-item p{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+.special-item i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    font-size:20px;
+    text-align: center;
+    padding-top: 1%;
+    color: white;
+    background-color: rgb(131, 67, 22);
+    transform: scale(1.25);
+    visibility: hidden;
+
+}
+.special-item:hover i{
+    visibility: visible;
+}
+
+.special-container2{
+    margin-top:5%;
+    width: 80%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 3%;
+}
+.quote{
+    width: 560px;
+    background-color: rgb(249, 228, 213);
+    position: relative;
+}
+.quote i{
+    font-size: 40px;
+    color: rgb(131, 67, 22);
+    position:absolute;
+    margin-top:2%;
+    margin-left:2%;
+}
+.quote .name, .name-job{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left:10%;
+    margin-top:2%;
+}
+.quote .name{
+    display: block;
+    font-size:28px;
+}
+.quote p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3% 4%;
+    line-height: 20px;
+}
+.line-container{
+    width: 40%;
+    margin-left: auto;
+    
+}
+
+.QuoteLine{
+    background-color: rgb(131, 67, 22);
+    display:inline-block;
+    height: 2px;
+    width: 55px;
+    margin: 15% 2% 8% 2%;
+}
+
+.design1{
+    width:260px;
+    height: 260px;
+    background-image: url(../images/cms-banner-1.jpg);
+    background-size: cover;
+    transition: 0.4s;
+}
+.design2{
+    width:260px;
+    height: 260px;
+    background-image: url(../images/cms-banner-2.jpg);
+    background-size: cover;
+    transition: 0.4s;
+}
+.discount{
+    display: block;
+    margin-top:10%;
+    margin-left:7%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17.5px;
+    color:rgb(131, 67, 22);
+}
+.interior{
+    margin-left: 7%;
+    font-size: 20px;
+}
+.design1:hover{
+    transform: scale(1.1);
+}
+.design2:hover{
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------------Perks--------------------------------------------------------- */
+.perks{
+    height: 24vh;
+}
+.perk-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:auto;
+}
+.perk-sprite1{
+    height: 50px;
+    background-image:url(../images/service-icon.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+    transition:0.5s;
+}
+.perk-sprite1:hover{
+    background-position-y: -91px;
+}
+.perk-sprite2{
+    height: 50px;
+    background-image:url(../images/service-icon.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -182px;
+    transition:0.5s;
+}
+.perk-sprite2:hover{
+    background-position-y: -273px;
+}
+.perk-sprite3{
+    height: 50px;
+    background-image:url(../images/service-icon.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -364px;
+    transition:0.5s;
+}
+.perk-sprite3:hover{
+    background-position-y: -455px;
+}
+.perk-sprite4{
+    height: 50px;
+    background-image:url(../images/service-icon.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -546px;
+    transition:0.5s;
+}
+.perk-sprite4:hover{
+    background-position-y: -637px;
+}
+.perk-sprite5{
+    height: 50px;
+    background-image:url(../images/service-icon.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -728px;
+    transition:0.5s;
+}
+.perk-sprite5:hover{
+    background-position-y: -824px;
+}
+
+.perk-item{
+    border-right: solid 1px rgb(131, 67, 22);
+    width: 220px;
+}
+.perk-info{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    width: 200px;
+}
+.perk-info span{
+    color: gray;
+    font-size: 15px;
+}
+.BigLine{
+    background-color: rgb(0, 0, 0);
+    display:block;
+    height: 1px;
+    width: 80%;
+    margin:auto;
+    margin-top: 4%;
+
+}
+
+
+/* --------------------------------------------Featured Products---------------------------------------- */
+.featured{
+    height: 150vh;
+}
+.categories{
+    margin-left: 55%;
+    transform:translateX(-50%);
+}
+.categories li{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline-block;
+    padding: 0px 15px;
+    font-size: 15px;
+}
+.categories {
+    margin-bottom:3%;
+}
+
+.product-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:auto;
+    
+}
+.chair1{
+    width: 325px;
+    height: 400px;
+    background-image: url(../images/chair1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.chair1-overlay{
+    width: 325px;
+    height: 400px;
+    background-image: url(../images/chair2.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(-90deg);
+    transition: 0.3s;
+    opacity: 0.85;
+    position: absolute;
+    visibility: hidden;
+}
+.chair1:hover .chair1-overlay{
+    visibility: visible;
+    transform: rotateY(0deg);
+}
+
+.chair2{
+    width: 325px;
+    height: 400px;
+    background-image: url(../images/chair3.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.chair2-overlay{
+    width: 325px;
+    height: 400px;
+    background-image: url(../images/chair4.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(-90deg);
+    transition: 0.3s;
+    opacity: 0.85;
+    position: absolute;
+    visibility: hidden;
+}
+.chair2:hover .chair2-overlay{
+    visibility: visible;
+    transform: rotateY(0deg);
+}
+.chair3{
+    width: 325px;
+    height: 400px;
+    background-image: url(../images/chair5.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.chair3-overlay{
+    width: 325px;
+    height: 400px;
+    background-image: url(../images/chair6.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(-90deg);
+    transition: 0.3s;
+    opacity: 0.85;
+    position: absolute;
+    visibility: hidden;
+}
+.chair3:hover .chair3-overlay{
+    visibility: visible;
+    transform: rotateY(0deg);
+}
+
+.icon-container{
+    display: inline-block;
+    width:175px;
+    height: 40px;
+    margin-left:28%;
+    margin-top:52%;
+    position: absolute;
+}
+
+.fab{
+    width:35px;
+    height: 35px;
+    color: rgb(255, 243, 231);
+    background-color: rgb(113, 67, 33);
+    border-radius: 5px;
+    font-size: 31px;
+    text-align: center;
+    padding:0px 5px;
+    
+}
+
+.product-info{
+    line-height: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.product-info span{
+    display: block;
+}
+.product-info i{
+    padding: 2% 0px;
+    color: gold;
+    font-size: 14px;
+}
+.product-info .five{
+    color:rgb(126, 97, 97);
+}
+.product-info .price{
+    font-size:20px;
+    font-weight: bold;
+}
+.product-item{
+    margin-bottom: 35px;
+}
+.featured-line:hover .line{
+    transform: scaleX(1.5);
+}
